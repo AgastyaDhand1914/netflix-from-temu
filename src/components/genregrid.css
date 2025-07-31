@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(34, 30, 30);
+}
+
+#grid-cont {
+    margin-bottom: 85px;
+}
+
+#genre-name {
+    color: white;
+    font-family: serif;
+    font-weight: 900;
+    font-size: 60px;
+    margin-bottom: 50px;
+    padding-left: 40px;
+}
+
+.grid {
+    display: grid;
+    margin: 0 auto;
+    width: 85%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    overflow: hidden;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 14px;
+    margin-top: 10px;
+}
+
+.image-ind {
+    height: 256px;
+    width: 176px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    transform-origin: center;
+    box-shadow: 0 5px 5px rgba(255, 255, 255, 0.1);
+}
+
+.image-ind:hover {
+    box-shadow: 0 0 20px rgb(175, 10, 10);
+}

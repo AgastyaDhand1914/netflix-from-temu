@@ -1,0 +1,137 @@
+header {
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    gap: 50px;
+}
+
+#logo {
+    height: 30px;
+}
+
+#notification, #search, #user-profile{
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    background-size: contain;
+}
+
+#notification {
+    background-image: url('../assets/notif_icon.png');
+}
+
+#notification:hover {
+    background-image: url('../assets/notif_icon_black.png');
+}
+
+#search {
+    height: 34px;
+    width: 34px;
+    background-image: url('../assets/search_icon.png');
+}
+
+#search:hover {
+    background-image: url('../assets/search_icon_black.png');
+}
+
+#user-profile {
+    background-image: url('../assets/profile_icon.png');
+}
+
+#user-profile:hover {
+    background-image: url('../assets/profile_icon_white.png');
+}
+
+.options {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-option {
+    background-color: black;
+    position: relative;
+    padding-bottom: 2px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar-option::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar-option:hover::after {
+    transform: scaleX(1);
+    height: 2px;
+}
+
+.navbar-option.selected {
+    background-color: black;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 5px solid red;
+    border-radius: 3px;
+}
+
+.navbar-option.selected:hover::after {
+    transform: none;
+    height: 0;
+}
+
+.navbar-option.selected::after {
+    transform: scale(1);
+    transition: none;
+    height: 0;
+}
+
+#icon-options {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+#search-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#gradient {
+    position: relative;
+    top: -1px;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to bottom, black, rgb(34, 30, 30));
+}
