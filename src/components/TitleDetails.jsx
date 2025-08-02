@@ -99,21 +99,35 @@ const TitleDetails = () => {
           <div id="title-date">Released in: {year}</div>
           <div id="title-genres">
             Genre Tags:
-            {genres &&
-              title.genre_ids.map((genre_id, index) => (
-                <div key={index}>
-                  {genres
-                    .filter((genre) => genre.id === genre_id)
-                    .map((filtered_genre, index2) => (
-                      <div
-                        key={index2}
-                        style={{ backgroundColor: 'rgb(34, 30, 30)' }}
-                      >
-                        {filtered_genre.name}
-                      </div>
-                    ))}
-                </div>
-              ))}
+            {genres && title && (
+              <>
+                {Array.isArray(title.genre_ids) &&
+                  title.genre_ids.map((genre_id, index) => (
+                    <div key={`gid-${index}`}>
+                      {genres
+                        .filter((genre) => genre.id === genre_id)
+                        .map((filtered_genre, index2) => (
+                          <div
+                            key={`gname-${index2}`}
+                            style={{ backgroundColor: 'rgb(34, 30, 30)' }}
+                          >
+                            {filtered_genre.name}
+                          </div>
+                        ))}
+                    </div>
+                  ))}
+
+                {Array.isArray(title.genres) &&
+                  title.genres.map((genreObj, index) => (
+                    <div
+                      key={`gobj-${index}`}
+                      style={{ backgroundColor: 'rgb(34, 30, 30)' }}
+                    >
+                      {genreObj.name}
+                    </div>
+                  ))}
+              </>
+            )}
           </div>
         </div>
         <div id="title-overview">{title.overview || 'N/A'}</div>

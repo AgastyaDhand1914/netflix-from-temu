@@ -1,7 +1,7 @@
 :root {
   position: absolute;
   width: 125%; 
-  height: 125%;
+  height: auto;
   transform: scale(0.8);
   transform-origin: top left;
   background-color: rgb(34, 30, 30);
